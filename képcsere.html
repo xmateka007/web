@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="favicon/favicon.ico">
+
+    <style>
+        .image-container {
+            display: inline-block;
+        }
+
+        .image-container img {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="Keplink.html">Képlink,</a>
+
+        <a href="listák.html">Lista,</a>
+
+        <a href="orarend.html">Órarend,</a>
+
+        <a href="urlap.html">Űrlap,</a>
+
+        <a href="index.html">Föoldal,</a>
+
+        <a href="4évszak.html">évszakok</a>
+
+    </nav>
+    
+    <div class="image-container" onclick="swap_images();">
+        <img src="./img/first.jpg" id="first">
+        <img src="./img/second.jpg" id="second" style="display: none;">
+    </div>
+
+    <footer id="footer">
+        <p>Készítette: Vorona Máté</p>
+        <p><a href="voronam@kkszki.hu">voronam@kkszki.hu</a></p>
+    </footer>
+
+    <script>
+        function swap_images() {
+            let first = document.getElementById("first");
+            let second = document.getElementById("second");
+
+            if (first.style.display === "none") {
+                first.style.display = "block";
+                second.style.display = "none";
+            } else {
+                first.style.display = "none";
+                second.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
